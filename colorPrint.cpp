@@ -9,9 +9,9 @@ void customPrint(textColor textColor, textAttribute textAttribute,
     va_list args;
     va_start(args, format);
 
-    printf("\033[%d;%d;%dm", textAttribute, textColor, backgroundColor);
-    vprintf(format, args);
-    printf("\033[0m");
+    fprintf(stderr, "\033[%d;%d;%dm", textAttribute, textColor, backgroundColor);
+    vfprintf(stderr, format, args);
+    fprintf(stderr, "\033[0m");
 
     va_end (args);
 }
