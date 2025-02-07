@@ -1,6 +1,8 @@
 #ifndef IN_OUT_STREAM_H_
 #define IN_OUT_STREAM_H_
 
+#include <stdlib.h>
+
 enum textAttribute {
     normal      = 0,
     bold        = 1,
